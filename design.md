@@ -9,25 +9,25 @@ BloodLink follows a three-tier architecture:
 ## System Architecture Diagram
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    Client Browser                        │
-│              (HTML + CSS + JavaScript)                   │
+│                    Client Browser                       │
+│              (HTML + CSS + JavaScript)                  │
 └────────────────────┬────────────────────────────────────┘
                      │ HTTP/HTTPS
 ┌────────────────────▼────────────────────────────────────┐
-│                  Flask Application                       │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │  Routes & Controllers                             │  │
-│  │  - Auth, Donor, Search, Admin                    │  │
-│  └──────────────────┬───────────────────────────────┘  │
-│  ┌──────────────────▼───────────────────────────────┐  │
-│  │  Business Logic & AI Services                     │  │
-│  │  - Donor Matching, Spam Detection, Alerts        │  │
-│  └──────────────────┬───────────────────────────────┘  │
+│                  Flask Application                      │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │  Routes & Controllers                            │   │
+│  │  - Auth, Donor, Search, Admin                    │   │
+│  └──────────────────┬───────────────────────────────┘   │
+│  ┌──────────────────▼───────────────────────────────┐   │
+│  │  Business Logic & AI Services                    │   │
+│  │  - Donor Matching, Spam Detection, Alerts        │   │
+│  └──────────────────┬───────────────────────────────┘   │
 └────────────────────┬┴───────────────────────────────────┘
                      │
         ┌────────────┼────────────┐
         │            │            │
-┌───────▼──────┐ ┌──▼─────────┐ ┌▼──────────────┐
+┌───────▼──────┐ ┌───▼────────┐ ┌─▼─────────────┐
 │   SQL DB     │ │  Maps API  │ │  Email/SMS    │
 │   (SQLite/   │ │  (Google)  │ │  Service      │
 │  PostgreSQL) │ └────────────┘ └───────────────┘
@@ -247,3 +247,4 @@ def find_nearest_donors(patient_location, blood_group, radius_km=10):
 6. Multi-language support
 7. SMS notifications
 8. Social media integration
+
