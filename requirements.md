@@ -57,11 +57,6 @@ A web-based platform where:
 - **Urgency Alerts**
   - Priority notifications for urgent requests
   - Emergency broadcast to nearby donors
-  
-- **Donation Reminders**
-  - Track last donation date
-  - Remind donors when eligible again (90 days)
-  - Encourage regular donations
 
 ### 5. Admin Panel
 - User management
@@ -110,4 +105,5 @@ A web-based platform where:
 - Successful blood donation connections
 - User satisfaction ratings
 - Platform uptime percentage
+
 
