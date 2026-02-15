@@ -21,7 +21,7 @@ BloodLink follows a three-tier architecture:
 │  └──────────────────┬───────────────────────────────┘   │
 │  ┌──────────────────▼───────────────────────────────┐   │
 │  │  Business Logic & AI Services                    │   │
-│  │  - Donor Matching, Spam Detection, Alerts        │   │
+│  │  - Donor Matching, Alerts                        │   │
 │  └──────────────────┬───────────────────────────────┘   │
 └────────────────────┬┴───────────────────────────────────┘
                      │
@@ -138,20 +138,10 @@ def find_nearest_donors(patient_location, blood_group, radius_km=10):
     return sorted_donors
 ```
 
-### 2. Spam Detection Model
-- Features: registration patterns, profile completeness, activity frequency
-- Algorithm: Random Forest Classifier
-- Training data: verified vs flagged users
-
-### 3. Urgency Prioritization
+### 2. Urgency Prioritization
 - Factors: time since request, urgency level, donor response rate
 - Weighted scoring system
 - Auto-escalation for critical cases
-
-### 4. Donation Reminder System
-- Cron job checks last_donation_date
-- Sends reminders after 90 days
-- Personalized messaging based on donation history
 
 ## UI/UX Design
 
@@ -247,4 +237,5 @@ def find_nearest_donors(patient_location, blood_group, radius_km=10):
 6. Multi-language support
 7. SMS notifications
 8. Social media integration
+
 
