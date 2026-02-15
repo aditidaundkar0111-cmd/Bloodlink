@@ -58,11 +58,6 @@ A web-based platform where:
   - Priority notifications for urgent requests
   - Emergency broadcast to nearby donors
   
-- **Spam Detection**
-  - Identify and flag fake donor profiles
-  - Verify donor authenticity
-  - Report mechanism for suspicious activity
-  
 - **Donation Reminders**
   - Track last donation date
   - Remind donors when eligible again (90 days)
@@ -115,3 +110,4 @@ A web-based platform where:
 - Successful blood donation connections
 - User satisfaction ratings
 - Platform uptime percentage
+
